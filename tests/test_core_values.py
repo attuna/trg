@@ -14,6 +14,7 @@ def test_core_values_extraction(page):
     home_page.header.click_careers()
     careers_header.click_life_at_trg()
 
+    life_at_trg_page.scroll_to_core_values()
     core_values = life_at_trg_page.extract_core_values()
     save_json(core_values)
     download_images_named_by_headline(core_values)
