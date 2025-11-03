@@ -6,8 +6,7 @@ class LifeAtTrgPage(BasePage):
 
 
     def scroll_to_core_values(self):
-        self.page.wait_for_selector("ul li", state="attached", timeout=8000)
-        self.page.wait_for_timeout(1000) #I've tried to get rid of wix autoscroll, no success
+        self.page.wait_for_timeout(1000) #I've tried to get rid wix anchor menu scrolling, no success
         element = self.page.locator(f"text=Whatever it takes!")
         element.scroll_into_view_if_needed()
         element.wait_for(state="visible")
